@@ -1,4 +1,4 @@
-# oauth server
+# oauth2 server
 
 ## Features
 - Authorization  code grant
