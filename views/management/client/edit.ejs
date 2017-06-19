@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include ../../common/header %>
+
+    <body>
+        <div id="wrapper" class="toggled">
+            <% include ../../common/sidebar %>
+
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h1><span class="fa fa-plus"></span> Create Client</h1>
+
+
+                                <!-- CREATE FORM -->
+                                <form action="/management/clients/<%= client.client_id %>/edit" method="post">
+                                    <div class="form-group">
+                                        <label>Client ID:</label>
+                                        <input type="text" class="form-control" name="client_id" value="<%= client.client_id %>" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Client Secret</label>
+                                        <input type="text" class="form-control" name="client_secret" value="<%= client.client_secret %>" readonly>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Name</label>
+                                        <input type="text" class="form-control" name="name" value="<%= client.name %>" required >
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Trusted</label>
+                                        <% if (client.isTrusted) { %>
+                                        <input type="checkbox" class="form-control" name="trusted" checked="checked" />
+                                        <% } else { %>
+                                        <input type="checkbox" class="form-control" name="trusted" />
+                                        
+                                        <% } %>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Redirect URIs</label>
+                                        <textarea rows="8" class="form-control" name="redirect_uris"><%= client.redirect_uris %></textarea>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-warning btn-lg">Update</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /#page-content-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+        <% include ../../common/scripts %>
+
+    </body>
+
+</html>

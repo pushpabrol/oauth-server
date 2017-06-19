@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<% include ../common/header %>
+
+    <body>
+        <div id="wrapper">
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                                        <p>Hi
+                            <%= user.name %>!</p>
+                        <p><b><%= client.name %></b> is requesting access to your account.</p>
+                        <p>Do you approve?</p>
+
+                        <form action="/oauth/authorize/decision" method="post">
+                            <input name="transaction_id" type="hidden" value="<%= transactionId %>" />
+                            <div>
+                                <input type="submit" value="Allow" id="allow" />
+                                <input type="submit" value="Deny" name="cancel" id="deny" />
+                            </div>
+                        </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+        </div>
+        <!-- /#wrapper -->
+
+        <% include ../common/scripts %>
+
+    </body>
+
+</html>

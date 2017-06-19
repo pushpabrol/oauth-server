@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<% include ../../common/header %>
+
+    <body>
+        <div id="wrapper" class="toggled">
+            <% include ../../common/sidebar %>
+
+                <!-- Page Content -->
+                <div id="page-content-wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h1><span class="fa fa-plus"></span> Create User</h1>
+
+
+                                <!-- CREATE FORM -->
+                                <form action="/management/users/create" method="post">
+                                    <div class="form-group">
+                                        <label>Email:</label>
+                                        <input type="text" class="form-control" name="username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Fist Name:</label>
+                                        <input type="text" class="form-control" name="givenName">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Family Name:</label>
+                                        <input type="text" class="form-control" name="familyName">
+                                    </div>                                          
+                                    <div class="form-group">
+                                        <label>Password:</label>
+                                        <input type="password" class="form-control" name="password">
+                                    </div>
+
+                                    <button type="submit" class="btn btn-warning btn-lg">Create</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /#page-content-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+
+        <% include ../../common/scripts %>
+
+    </body>
+
+</html>
