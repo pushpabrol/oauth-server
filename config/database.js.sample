@@ -1,4 +1,4 @@
 // config/database.js
 module.exports = {
-    'url' : 'mongodb://<username>:<password>@mongohost:post/oauth-server-db'
+    'url' : 'mongodb://<username>:<password>@mongohost:port/oauth-server-db'
 };
