@@ -1,4 +1,4 @@
 // config/database.js
 module.exports = {
-    'url' : 'mongodb://pushp:whats4me@mydirectory.cloudapp.net:27017/oauth2'
+    'url' : 'mongodb://<username>:<password>@mongohost:post/oauth-server-db'
 };
